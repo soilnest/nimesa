@@ -1,7 +1,6 @@
 package nimesa;
 import java.util.Scanner;
 import static io.restassured.RestAssured.*;
-import org.testng.annotations.Test;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 
@@ -27,7 +26,6 @@ public class ApiTest {
 		return index;
 	}
 
-	@Test
 	public float getTemp(String dateTS) {
 		float temperature = 0;
 		Response res = apiGET();
@@ -37,7 +35,6 @@ public class ApiTest {
 		return temperature;
 	}
 
-	@Test
 	public float getWind(String dateTS) {
 		float windSpeed = 0;
 		Response res = apiGET();
@@ -47,7 +44,6 @@ public class ApiTest {
 		return windSpeed;
 	}
 
-	@Test
 	public float getPressure(String dateTS) {
 		float windPressure = 0;
 		Response res = apiGET();
